@@ -1,0 +1,13 @@
+.product{
+    /* height: 600px; */
+    border: 1px solid rgba(107, 104, 104, 0.079);
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 10px 5px rgba(169, 168, 168, 0.079);
+}
+img {
+  width: 225px;
+  height: 225px;
+  object-fit: scale-down;
+}

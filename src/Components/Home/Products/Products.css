@@ -1,0 +1,30 @@
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+
+}
+
+/* make services responsive */
+@media only screen and (max-width:576px) {
+    .products-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.carditem{
+    margin: 60px;
+   
+}
+.Spinner{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+}
