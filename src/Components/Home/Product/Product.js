@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './Product.css';
 
 const Product = ({product}) => {
+    const {_id, name, img, description, price} = product;
     const  navigate=useNavigate();
     const navigateToProduct = id =>{
-        navigate(`/product/${id}`);
+        navigate(`/product/${_id}`);
     }
     return (
         
@@ -15,7 +16,7 @@ const Product = ({product}) => {
                     <img className='w-100' src={product.img} alt="" />
                     <h5>{product.name}</h5>
                     <h4 className="color productPrice me-auto">৳ {product.price}</h4>                   
-                    <button onClick={()=>navigateToProduct(product.id)} className='btn btn-success'>Buy Now</button>
+                    <button onClick={()=>navigateToProduct(product._id)} className='btn btn-success'>Buy Now</button>
                  </div>
             </div>
            </div>
