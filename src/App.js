@@ -15,6 +15,7 @@ import Register from './Components/Login/Register/Register';
 import Checkout from './Components/Checkout/Checkout/Checkout';
 import RequiredAuth from './Components/Login/RequiredAuth/RequiredAuth';
 import AddService from './Components/AddService/AddService';
+import ManageProducts from './Components/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -36,9 +37,14 @@ function App() {
           <Checkout></Checkout>
         </RequiredAuth>
       } ></Route>
-      <Route path='/addservice' element={
+      <Route path='/addproduct' element={
         <RequiredAuth>
           <AddService></AddService>
+        </RequiredAuth>
+      } ></Route>
+      <Route path='/manageproduct' element={
+        <RequiredAuth>
+          <ManageProducts></ManageProducts>
         </RequiredAuth>
       } ></Route>
       <Route path='*' element={<NotFound></NotFound>} ></Route>
