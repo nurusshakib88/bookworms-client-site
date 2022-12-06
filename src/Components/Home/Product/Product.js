@@ -9,43 +9,41 @@ const Product = ({product}) => {
         navigate(`/product/${_id}`);
     }
     return (
-        
-           <div className='card-container' >          
-            <div>
-                <div className='product' >
-                    <img className='w-100' src={product.img} alt="" />
-                    <h5>{product.name}</h5>
-                    <h4 className="color productPrice me-auto">৳ {product.price}</h4>                   
-                    <button onClick={()=>navigateToProduct(product._id)} className='btn btn-success'>Buy Now</button>
-                 </div>
+
+        <>
+        <div className="b_single product b_single2 text-center" onClick={()=>navigateToProduct(product._id)}>
+
+            <div className="b_single_item">
+            <img src={product.img} className="img-fluid" alt="bookworms"/>
+
+            <div className="b_overlay">
+                <ul className="list-inline text-center">
+                    <li className="list-inline-item">
+                        <a href="#"><i className="fa-solid fa-eye"></i></a>
+                    </li>
+                    <li className="list-inline-item">
+                        <a href="#"><i className="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li className="list-inline-item">
+                        <a href="#"><i className="fa-solid fa-cart-shopping"></i></a>
+                    </li>                
+                </ul>
             </div>
-           </div>
+
+            <div className="overlay_bg"></div>
+            </div>
+
+            <div className="price text-start">
+            <h3>{product.name}</h3>
+            <p>{product.price} ৳</p>
+            </div>
+        </div>
+        </>
+        
+        
         
     );
 };
 
 export default Product;
-
-
-
-// import React from 'react';
-// // import Card from 'react-bootstrap/Card';
-// import { Link } from 'react-router-dom';
-// import './Product.css'
-
-// const Product = ({product}) => {
-//     const {name,img,description,price}=product;
-//     return (
-//         <div className='product'>
-//         <img className='w-100' src={img} alt="" />
-//         <h2>{name}</h2>
-//         <p>Price: {price}</p>
-//         <p><small>{description}</small></p>
-//         <button className='btn btn-primary'>Book: {name}</button>
-//     </div>
-    
-//     );
-// };
-
-// export default Product;
 

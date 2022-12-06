@@ -2,12 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter,Route, Routes } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import Deals from './Components/Deals/Deals';
+import Contact from './Components/Contact/Contact';
 import Search from './Components/Header/Search';
 import About from './Components/About/About';
-import Orders from './Components/Orders/Orders'
+import Shop from './Components/Shop';
 import ProductDetails from './Components/Home/ProductDetails/ProductDetails';
 import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login';
@@ -21,14 +21,13 @@ function App() {
   return (
     <div className="App">
      <Header></Header>
-     <></>
-     
+         
     
     <Routes>
       <Route path='/' element={<Home></Home>} ></Route>
       <Route path='/product/:productId' element={<ProductDetails></ProductDetails>} ></Route>
-      <Route path='/orders' element={<Orders></Orders>} ></Route>
-      <Route path='/deals' element={<Deals></Deals>} ></Route>
+      <Route path='/shop' element={<Shop></Shop>} ></Route>
+      <Route path='/contact' element={<Contact></Contact>} ></Route>
       <Route path='/about' element={<About></About>} ></Route>
       <Route path='/login' element={<Login></Login>} ></Route>
       <Route path='/register' element={<Register></Register>} ></Route>
@@ -52,7 +51,7 @@ function App() {
     </Routes>
 
 
-     
+    <Footer></Footer>     
     </div>
   );
 }

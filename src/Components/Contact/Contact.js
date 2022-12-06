@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-
-const About = () => {
-    return (
-        <>
-        <section>
+const Contact = () => {
+  return (
+    <section>
         <div className='container text-center'>
 
             <h2 className='h_section mb-5'>Upcoming...</h2>
@@ -13,11 +11,8 @@ const About = () => {
 
 
         </div>
-    </section>      
-        </>
-        
-        
-    );
-};
+    </section>
+  )
+}
 
-export default About;
+export default Contact

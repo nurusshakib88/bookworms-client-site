@@ -29,6 +29,16 @@ const SocialLogin = () => {
         navigate(from, { replace: true });
     }
 
+    // let errorElement;
+
+    // if (error || error1) {
+    //     errorElement = <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
+    // }
+
+    // if (user || user1) {
+    //     navigate('/home');
+    // }
+
     return (
         <div>
             <div className='d-flex align-items-center'>
@@ -40,20 +50,18 @@ const SocialLogin = () => {
             <div className=''>
                 <button
                     onClick={() => signInWithGoogle()}
-                    className='btn btn-success w-50 d-block mx-auto my-2'>
-                    <img style={{ width: '30px' ,height:'30px' }} src={google} alt="" />
-                    <span className='px-2'>Google Sign In</span>
+                    className='login_btn'>
+                    <img style={{ width: '20px' ,height:'20px' }} src={google} alt="" />
+                    <span className='px-2'>Sign In with Google</span>
                 </button>
-                <button className='btn btn-success w-50 d-block mx-auto my-2'>
-                    <img style={{ width: '30px',height:'30px' }} src={facebook} alt="" />
-                    <span className='px-2'>Facebook Sign In</span>
-                </button>
+
                 <button
                     onClick={() => signInWithGithub()}
-                    className='btn btn-success w-50 d-block mx-auto'>
-                    <img style={{ width: '30px' ,height:'30px' }} src={github} alt="" />
+                    className='login_btn s_login'>
+                    <img style={{ width: '28px' ,height:'28px' }} src={github} alt="" />
                     <span className='px-2'>Github Sign In</span>
                 </button>
+                
             </div>
         </div>
     );

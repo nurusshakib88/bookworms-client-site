@@ -1,5 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Footer from '../Footer/Footer';
+import "../AddService/AddService.css";
+import Header from '../Header/Header';
 
 const AddService = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -19,18 +22,25 @@ const AddService = () => {
 
     
     return (
-        <div className='w-50 mx-auto'>
-            <h1>Add Books</h1>
-           <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+        <>
+        <div className='w-50 mx-auto'> 
+                 
+           <h1 className='heading'>Add Books</h1>
+           <form className='d-flex flex-column mb-5 add_form' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <input className='mb-2' placeholder='price' type="number" {...register("price")} />
-                <textarea className='mb-2' placeholder='description' {...register("description")} />                
-                <input className='mb-2' placeholder='PhotoUrl' type="text" {...register("img")} />
-                <input type="submit" value="AddService" />
+                <input className='mb-2' placeholder='Writer' type="text" {...register("writer")} />
+                <input className='mb-2' placeholder='Catagory' type="text" {...register("catagory")} />
+                <input className='mb-2' placeholder='Publisher' type="text" {...register("publisher")} />
+                <input className='mb-2' placeholder='Language' type="text" {...register("language")} />
+                <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
+                <input className='mb-2' placeholder='Stock' type="number" {...register("stock")} />
+                <textarea className='mb-2' placeholder='Description' {...register("description")} />                
+                <input className='mb-2' placeholder='Photo Url' type="text" {...register("img")} />
+                <input type="submit" value="Add Book"  className='login_btn'/>              
                 
-                
-    </form>
+            </form>
         </div>
+        </>
     );
 };
    

@@ -17,32 +17,33 @@ const Products = () => {
      setLoading(true)
      setTimeout(()=>{
       setLoading(false)
-     },2000)
+     },1000)
    }, [])
    
     return (
-      <div>
-        <div className='carditem'>
-              <div >
-            <>
-            {
-              loading?
-              <div className='Spinner'>
-                <HashLoader  color={'#157347'} loading={loading}  size={150} aria-label="Loading Spinner" />
-              </div>
-              :
-              <div className='products-container '>
+      <section className='mt-1 mb-5'>
+        <div className='carditem container'>         
+
+          <div>
+              <>
               {
-                      products.map(product => <Product key={product._id} product={product}></Product>)
-                    }
-                 
-                 </div>
-            }
-            </>
-        </div>
+                loading?
+                <div className='Spinner'>
+                  <HashLoader  color={'#523e27'} loading={loading}  size={80} aria-label="Loading Spinner" />
+                </div>
+                :
+                <div className='products-container '>
+                {
+                        products.map(product => <Product key={product._id} product={product}></Product>)
+                      }
+                  
+                  </div>
+              }
+              </>
+          </div>
         
         </div>
-      </div>
+      </section>
        
     );
 };
