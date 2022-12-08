@@ -5,7 +5,7 @@ import "../AddService/AddService.css";
 import Header from '../Header/Header';
 
 const AddService = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {         
         console.log(data)
         const url =`http://localhost:5000/product`;
@@ -18,6 +18,7 @@ const AddService = () => {
         })
         .then(res=>res.json())
         .then(result=>console.log(result));
+        reset();
     };
 
     

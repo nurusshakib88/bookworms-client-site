@@ -17,9 +17,9 @@ const SocialLogin = () => {
     
     let errorElement;
 
-    if(loading || loading1){
-        return <Loading></Loading>
-    }
+    // if(loading || loading1){
+    //     return <Loading></Loading>
+    // }
 
     if (error || error1) {
         errorElement = <p className='text-danger'>Error: {error?.message} {error1?.message}</p>

@@ -36,14 +36,22 @@ const ProductDetails = () => {
                             <div className='p_text'>
                                 <h1>{product.name}</h1>
                                 <h2>{product.price} ৳</h2>
-                                <h3 className='pt-3'>Description</h3>
+                                <h3 className='pt-3'>Description</h3>                                
                                 <h5>{product.description}</h5>
-                                <p className='pt-3'><span>Writer: </span>{product.writer}</p>
-                                <p><span>Language: </span>{product.language}</p>
-                                <p><span>Catagory: </span>{product.catagory}</p>
-                                <p><span>Publisher: </span>{product.publisher}</p>
-                                <p><span>Language: </span>{product.language}</p>
-                                <p><span>Stock Available: </span>{product.stock}</p>
+
+                                <div className='row'>
+                                    <div className='col-6'>
+                                        <p className='pt-3'><span>Writer: </span>{product.writer}</p>
+                                        <p><span>Language: </span>{product.language}</p>
+                                        <p><span>Catagory: </span>{product.catagory}</p>
+                                    </div>
+                                    <div className='col-6'>
+                                    <p className='pt-3'><span>Publisher: </span>{product.publisher}</p>
+                                    <p><span>Stock Available: </span>{product.stock}</p>
+                                    </div>
+                                </div>
+                                
+                                
 
                                 <Link to='/checkout' className='btn p-0'>
                                     <button type="submit" className='btn login_btn m-0'>Proceed Checkout</button>

@@ -74,7 +74,7 @@ const Login = () => {
                                         <Form.Control ref={passwordElement} type="password" placeholder="Password" required />
                                     </Form.Group>
                                                     
-                                    <NavLink onClick={focusInput} type="submit" className='login_btn'>Submit</NavLink>
+                                    <NavLink onClick={focusInput} type="submit" className='login_btn'>Login</NavLink>
                                 </Form>
                                 <p className='mt-2'>New to BookWorms ?<Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={nevigateRegister}> Please Register</Link></p>
                                 <SocialLogin></SocialLogin>

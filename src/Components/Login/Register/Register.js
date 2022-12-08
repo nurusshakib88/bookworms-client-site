@@ -8,6 +8,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { NavLink } from 'react-router-dom';
 import Footer from '../../Footer/Footer';
 // import auth from '../../../firebase.init';
+import { useLocation } from 'react-router-dom';
 
 
 const Register = () => {
@@ -20,9 +21,16 @@ const Register = () => {
       ] = useCreateUserWithEmailAndPassword(auth);
 
 
-    const emailElement = useRef('');
-    const passwordElement = useRef('');
-    const navigate =useNavigate();
+      const emailElement = useRef('');
+      const passwordElement = useRef('');
+      const navigate =useNavigate();
+      const location = useLocation();
+  
+       let from = location.state?.from?.pathname || "/";
+  
+       if (user) {
+          navigate(from, { replace: true });
+      }
 
     const focusInput = event => {
         event.preventDefault();
