@@ -58,19 +58,19 @@ const Login = () => {
                             <div className="col-lg-6 align-self-center">
                                 <div className="login_form ps-lg-3 pe-lg-5 p-4">
                                 
-                                <NavLink to="/" className="logo2 text-center">
+                                <NavLink to="/" className="logo2 text-center mb-4">
                                     <img src="images/logo.png" className="img-fluid" alt="bookworms"/>
                                 </NavLink>
 
                                 <Form onSubmit={focusInput}>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Email address</Form.Label>
+                                        <Form.Label hidden>Email address</Form.Label>
                                         <Form.Control ref={emailElement} type="email" placeholder="Enter email" required/>
                                     
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                                        <Form.Label>Password</Form.Label>
+                                        <Form.Label hidden>Password</Form.Label>
                                         <Form.Control ref={passwordElement} type="password" placeholder="Password" required />
                                     </Form.Group>
                                                     

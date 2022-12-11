@@ -59,25 +59,25 @@ const Register = () => {
                                 
                                     <form onSubmit={focusInput} >
                                         <div className="form-body">
-                                        <h4 className="l_header">Sign up Form</h4>
+                                        <h4 className="l_header mb-4">Sign up Form</h4>
                                             <div className="username mb-3">
-                                                <label className="form-label" for="firstName">First Name </label>
+                                                <label hidden className="form-label" for="firstName">First Name </label>
                                                 <input className="form-control" type="text" id="firstName" placeholder="First Name" required/>
                                             </div>
                                             <div className="lastname mb-3">
-                                                <label className="form-label" for="lastName">Last Name </label>
+                                                <label hidden className="form-label" for="lastName">Last Name </label>
                                                 <input  type="text" name="" id="lastName"  className="form-control"placeholder="LastName" required/>
                                             </div>
                                             <div className="email mb-3">
-                                                <label className="form-label" for="email">Email </label>
+                                                <label hidden className="form-label" for="email">Email </label>
                                                 <input ref={emailElement} type="email" id="email" className="form-control" placeholder="Email" required/>
                                             </div>
                                             <div className="password mb-3">
-                                                <label className="form-label" for="password">Password </label>
+                                                <label hidden className="form-label" for="password">Password </label>
                                                 <input className="form-control" type="password"  id="password" placeholder="Password" required/>
                                             </div>
                                             <div className="confirm-password mb-3">
-                                                <label className="form-label" for="confirmPassword">Confirm Password </label>
+                                                <label hidden className="form-label" for="confirmPassword">Confirm Password </label>
                                                 <input ref={passwordElement} className="form-control" type="password" id="confirmPassword" placeholder="Confirm Password"/>
                                             </div>
                                         </div>

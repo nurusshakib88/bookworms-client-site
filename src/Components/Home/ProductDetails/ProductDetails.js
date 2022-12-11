@@ -13,7 +13,7 @@ const ProductDetails = () => {
 
     useEffect(() => {
       
-        const url = `http://localhost:5000/product/${productId}`;
+        const url = `https://bookworms-server.up.railway.app/product/${productId}`;
         
 
         fetch(url)

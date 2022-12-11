@@ -8,7 +8,8 @@ const AddService = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {         
         console.log(data)
-        const url =`http://localhost:5000/product`;
+        // const url =`http://localhost:5000/product`;
+        const url =`https://bookworms-server.up.railway.app/product`;
         fetch(url,{
             method:'POST',
             headers:{
@@ -28,7 +29,7 @@ const AddService = () => {
                  
            <h1 className='heading'>Add Books</h1>
            <form className='d-flex flex-column mb-5 add_form' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 100 })} />
                 <input className='mb-2' placeholder='Writer' type="text" {...register("writer")} />
                 <input className='mb-2' placeholder='Catagory' type="text" {...register("catagory")} />
                 <input className='mb-2' placeholder='Publisher' type="text" {...register("publisher")} />

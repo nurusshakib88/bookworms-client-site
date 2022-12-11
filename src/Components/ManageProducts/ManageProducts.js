@@ -8,7 +8,8 @@ const ManageProducts = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url =`http://localhost:5000/product/${id}`;
+            // const url =`http://localhost:5000/product/${id}`;
+            const url =`https://bookworms-server.up.railway.app/product/${id}`;
             fetch(url,{
                 method:'DELETE',
                 
