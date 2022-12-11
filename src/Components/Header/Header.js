@@ -34,6 +34,7 @@ function Header() {
               <div>
                 <Nav className="d-flex me-auto my-2 my-lg-0 menu">
                   <Nav.Link as={Link} to='/' className='nav_link'>Home</Nav.Link>
+                  <Nav.Link as={Link} to='/about' className='nav_link'>About</Nav.Link>
                   <Nav.Link as={Link} to='/shop' className='nav_link'>Shop</Nav.Link>
                 
                   {
@@ -44,7 +45,6 @@ function Header() {
                   }
 
                   <Nav.Link as={Link} to='/contact' className='nav_link'>Contact</Nav.Link>
-                  <Nav.Link as={Link} to='/about' className='nav_link'>About</Nav.Link>
                   {
                     user ?
                     <Nav.Link className='login_btn c_btn' onClick={handleSignOut} as={Link} to='/login'>SignOut</Nav.Link>

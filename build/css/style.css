@@ -62,7 +62,7 @@ header{
    width: 100%;
    z-index: 999;
    transition: .5s ease;
-   padding: 35px 0;
+   padding: 25px 0;
    background-color: var(--bg-color) !important;
 }
 
@@ -362,6 +362,7 @@ section {
 .box {
    padding: 25px 20px 10px;
    transition: .5s;
+   border-radius: 10px;
 }
 .box_text h5 {
    padding-top: 15px;
@@ -386,6 +387,7 @@ section {
    height: 500px;
    background-color: black;
 }
+
 
 
 
@@ -489,4 +491,33 @@ footer {
 }
 
 
+.pagelink {
+   background-color: var(--primary-color);
+   padding: 60px;
+   color: #fff;
+}
+.pagelink h1 {
+   font-size: 45px;
+   font-family: Roboto-Bold;
+}
+.pagelink a {
+   text-decoration: none;
+   color: #fff;
+   margin-right: 10px;
+}
+.pagelink i {
+   font-size: 10px;
+   margin-right: 10px;
+}
 
+.pagelink a:hover {
+   color: #fff;
+}
+
+.s_form {
+   border-color: var(--primary-color) !important;
+}
+
+.s_form:focus, .s_form:active {
+   box-shadow: none !important;
+}

@@ -3,7 +3,7 @@ import React from 'react'
 const Banner = () => {
   return (
     <>
-      <section className="banner">
+      <section className="banner pt-lg-5 pt-0">
       <div className="container">
         <div className="row">
           <div className="col-xl-5 col-md-6 order-md-0 order-1">

@@ -36,7 +36,7 @@ header{
    width: 100%;
    z-index: 999;
    transition: .5s ease;
-   padding: 35px 0;
+   padding: 20px 0;
    background-color: var(--bg-color) !important;
 }
 

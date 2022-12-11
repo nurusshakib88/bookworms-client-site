@@ -7,13 +7,20 @@ import "../About/About.css";
 const About = () => {
     return (
         <>
-            <div className="page">
-                <div className="container">
-                    <div className="row">
-                    <span><Link to="/"><i className="fa-solid fa-house"></i></Link> / About Us</span>
-                    </div>
+            
+      <section className='pagelink mt-0'>
+        <div className='container'>
+            <div className="row align-items-center">
+              <div className='col-12 text-center'>
+                <div className='page_text'>
+                  <h1>About</h1>
+                  <span><Link to="/">Home</Link><i className="fa-solid fa-circle"></i>About</span>
                 </div>
+              </div>
             </div>
+        </div>
+
+      </section>
             <section className='about mt-lg-5 mt-3'>
 
                 <div className='container'>
